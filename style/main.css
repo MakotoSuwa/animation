@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --main-bg-color: repeating-linear-gradient( 90deg, #D0D0D0, #D0D0D0 1px, transparent 1px, transparent 16px), repeating-linear-gradient( 0deg, #D0D0D0, #D0D0D0 1px, #E2E2E2 1px, #E2E2E2 16px);    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-size: 16px 16px;
+  background-position: 50% 50%;
+  background-image: var(--main-bg-color);
+}
+

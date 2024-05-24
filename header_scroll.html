@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="style/main.css">
+    <style>
+        
+            :root {
+                --transition-duration: 0.6s;
+                --transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+            }
+
+            #contents{
+                width: 960px;
+                margin: 0 auto;
+                height: 5000px;
+                background-color: #ffffff;
+            }
+
+            .first {
+                transition: all var(--transition-duration) var(--transition-timing-function);
+            }
+
+            .fixed {
+                position: fixed;
+                top: -80px;
+                transition: top var(--transition-duration) var(--transition-timing-function);
+            }
+            
+    </style>
+</head>
+<body>
+    <div id="contents">
+        <header class="first">
+            <img src="https://placehold.jp/960x60.png" alt="ロゴ">
+        </header>
+        <header class="fixed">
+            <img src="https://placehold.jp/960x80.png" alt="ロゴ">
+        </header>
+    </div>
+
+    <script>
+
+    window.addEventListener('scroll', function() {
+        var firstHeader = document.querySelector('.first');
+        var fixHeader = document.querySelector('.fixed');
+        
+        var scrollPosition = window.scrollY;
+
+        if (scrollPosition > 0) {
+            firstHeader.style.opacity = '0';
+            fixHeader.style.top = '0';
+        } else {
+            firstHeader.style.opacity = '1';
+            fixHeader.style.top = '-80px';
+        }
+    });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll_text</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="text.css">
+    <style>
+        
+        :root {
+            --transition-duration: 0.4s;
+            --transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+            --transition-translate-y: 100px;
+        }
+
+        #contents{
+            width: 960px;
+            margin: 0 auto;
+            height: 12000px;
+            /* background-color: #ffffff; */
+        }
+
+        .card_list{
+            display: flex;
+            justify-content: space-around;
+            padding-top: 100px;
+        }
+
+        .card{
+            width: 200px;
+            height: 200px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px;
+        }
+
+        .card iframe{
+            width: 800px;
+            height: 600px;
+            border: none;
+            transform: scale(0.25) translate(-150%,-150%);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="contents">
+
+        <div class="card_list">
+            <div class="card">
+                <a href="button_hover.html">
+                    <p>ボタンホバー</p>
+                    <iframe src="button_hover.html" frameborder="0"></iframe>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="button_hover_push.html">
+                    <p>ボタンホバー_押し込み</p>
+                    <iframe src="button_hover_push.html" frameborder="0"></iframe>
+                </a>
+            </div>
+            
+            <div class="card">
+                <a href="header_scroll.html">
+                    <p>スクロールしたらヘッダーを切り替える</p>
+                    <iframe src="header_scroll.html" frameborder="0"></iframe>
+                </a>
+            </div>
+        </div>
+
+        <div class="card_list">
+            <div class="card">
+                <a href="image_beltconveyor.html">
+                    <p>画像を横に流す</p>
+                    <iframe src="image_beltconveyor.html" frameborder="0"></iframe>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="scroll_text.html">
+                    <p>スクロールしたら文字を表示</p>
+                    <iframe src="scroll_text.html" frameborder="0"></iframe>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="scroll_text_separate.html">
+                    <p>スクロールしたら文字を表示_1文字ずつ</p>
+                    <iframe src="scroll_text_separate.html" frameborder="0"></iframe>
+                </a>
+            </div> 
+        </div>
+
+        <div class="card_list">
+
+
+            <div class="card">
+                <a href="scroll_text_separate_digital.html">
+                    <p>スクロールしたら文字を表示_1文字ずつ_テックな演出</p>
+                    <iframe src="scroll_text_separate_digital.html" frameborder="0"></iframe>
+                </a>
+            </div>
+
+
+            <div class="card">
+                <a href="https://codepen.io/ugokuweb/pen/jOMpbqN" target="_blank">
+                    <p>スクロールのアテンション_伸びる動き</p>
+                    <iframe src="https://codepen.io/ugokuweb/pen/GRjBpoX" frameborder="0"></iframe>
+                </a>
+            </div>
+
+
+            <div class="card">
+                <a href="https://codepen.io/ugokuweb/pen/GRjBpoX" target="_blank">
+                    <p>スクロールのアテンション_矢印</p>
+                    <iframe src="https://codepen.io/ugokuweb/pen/GRjBpoX" frameborder="0"></iframe>
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="card_list">
+
+            <div class="card">
+                <a href="https://codepen.io/ugokuweb/pen/xxEJGjV">
+                    <p>モーダル</p>
+                    <iframe src="https://codepen.io/ugokuweb/pen/xxEJGjV" frameborder="0"></iframe>
+                </a>
+            </div>
+
+
+            <div class="card">
+                <a href="https://codepen.io/ugokuweb/pen/wvzpoKv">
+                    <p>画面遷移</p>
+                    <iframe src="https://codepen.io/ugokuweb/pen/wvzpoKv" frameborder="0"></iframe>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://codepen.io/ugokuweb/pen/wvzEwvd" target="_blank">
+                    <p>スライダー全画面</p>
+                    <iframe src="https://codepen.io/ugokuweb/pen/wvzEwvd" frameborder="0"></iframe>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="card_list">
+
+            <div class="card">
+                <a href="https://codepen.io/ugokuweb/pen/xxEJGjV">
+                    <p>モーダル</p>
+                    <iframe src="https://codepen.io/ugokuweb/pen/xxEJGjV" frameborder="0"></iframe>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://codepen.io/ugokuweb/pen/wvzpoKv">
+                    <p>画面遷移</p>
+                    <iframe src="https://codepen.io/ugokuweb/pen/wvzpoKv" frameborder="0"></iframe>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://codepen.io/ugokuweb/pen/GRjrzgx" target="_blank">
+                    <p>ローディング_数字+バー</p>
+                    <iframe src="https://codepen.io/ugokuweb/pen/GRjrzgx" frameborder="0"></iframe>
+                </a>
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

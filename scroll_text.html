@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll_text</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="text.css">
+    <style>
+        
+        :root {
+            --transition-duration: 0.4s;
+            --transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+            --transition-translate-y: 100px;
+        }
+
+        #contents{
+            width: 960px;
+            margin: 0 auto;
+            height: 12000px;
+            background-color: #ffffff;
+        }
+
+        .title{
+            padding-top: 200px;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .animate {
+            animation: animate 1s ease;
+        }
+
+        
+
+        @keyframes animate {
+            0% {
+                opacity: 0;
+                transform: translateY(var(--transition-translate-y));
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="contents">
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+        <div class="title">
+            <h2>LOREM IPSUM</h2>
+        </div>
+    </div>
+    <script>
+        const titles = document.querySelectorAll('.title');
+        const options = {
+            root: null,
+            rootMargin: '-5% 0px',
+            threshold: 0.5
+        };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                } else {
+                    //entry.target.classList.remove('animate');
+                }
+            });
+        }, options);
+        titles.forEach(title => {
+            observer.observe(title);
+        });
+    </script>
+</body>
+
+</html>

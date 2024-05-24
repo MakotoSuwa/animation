@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button_hover</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="text.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <style>
+        
+        /* クセのない印象 */
+        :root {
+            --transition-duration: 0.15s;
+            --transition-timing-function: ease-out;
+            --transition-opacity: 0.5;
+            --transition-tranlateX_arrow: 10px;
+            --transition-scale: 1.0;
+        }
+
+        /* 弾むポップな印象 */
+        /* :root {
+            --transition-duration: 0.3s;
+            --transition-timing-function: cubic-bezier(0.34,1.56,0.64,1);
+            --transition-opacity: 1;
+            --transition-tranlateX_arrow: 10px;
+            --transition-scale: 1.1;
+        } */
+
+        #contents{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 960px;
+            height: 540px;
+            background-color: #ffffff;
+        }
+
+        .title {
+            padding-top: 200px;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .buttons {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center; /* Add this line */
+        }
+
+        .btn {
+            transition: all var(--transition-duration) var(--transition-timing-function);
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            position: relative;
+            width: 240px;
+            height: 60px;
+            background-color: #000000;
+            border-radius: 30px;
+        }
+
+        .btn a{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .btn:hover{
+            transform: scale(var(--transition-scale));
+            opacity: var(--transition-opacity);
+        }
+
+        .btn_text {
+            position: absolute;
+            left: 30px;
+        }
+
+        .btn_icon {
+            transition: all var(--transition-duration) var(--transition-timing-function);
+            position: absolute;
+            right: 20px;
+        }
+
+        .btn:hover .btn_icon{
+            right: calc(20px - var(--transition-tranlateX_arrow));
+        }
+
+        .mdi.white {
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        </style>
+</head>
+<body>
+    <div id="contents">
+        <div class="buttons">
+
+                <div class="btn">
+                    <a href="#" target="_blank">
+                        <div class="btn_text">詳細を見る</div>
+                        <div class="btn_icon"><span class="mdi white mdi-chevron-right"></span></div>
+                    </a>
+                </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
